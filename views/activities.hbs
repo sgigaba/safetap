@@ -6,14 +6,14 @@
 <script>
 function myMap() {
 var mapProp= {
-  center:new google.maps.LatLng(26.1953,-28.0337),
-  zoom:5,
+  center:new google.maps.LatLng({{latitude}},{{longitude}}),
+  zoom:15,
 };
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABCTtq9rvztGfjpwuyXK9eZFvE7eLuuyY&callback=myMap"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlofrm4aHZfFWQ_w_LfBnGsB-n3u9vcf4&callback=myMap"></script>
 
 <div class="jumbotron">
     <div class = "row justify-content-center">

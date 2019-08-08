@@ -9,6 +9,7 @@ var bodyparser = require("body-parser");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var incidentsRouter = require('./routes/incidents');
+var locationsettings  = require('./routes/locationsettings');
 
 mongoose.connect("mongodb://127.0.0.1:27017/safeTap", {
   useNewUrlParser: true
@@ -41,6 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/incidents', incidentsRouter);
+app.use('/locationsettings', locationsettings);
 // app.use('/users', usersRouter);
 
 

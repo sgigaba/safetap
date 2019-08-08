@@ -5,8 +5,7 @@ const User = require("../models/User");
 const Location = require("../models/Locations");
 const Incidents = require("../models/Incidents");
 
-const locations = [];
-
+var locations = [];
 Location.find({}, function(err, doc){
   // console.log(doc);
   for(var i = 0; i < doc.length; i++){
@@ -17,6 +16,13 @@ Location.find({}, function(err, doc){
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  
+  // Location.find({}, function(err, doc){
+  //   // console.log(doc);
+  //   for(var i = 0; i < doc.length; i++){
+  //     locations.push(doc[i].locationName);
+  //   }
+  // });
   res.render('index', { title: 'Express', Locations: locations });
 });
 
@@ -33,7 +39,20 @@ router.get('/students', function(req, res){
 
 router.get('/activities', function(req, res, next) {
 
-  res.render('activities', { currentLocation: req.query.location , Locations: locations});
+
+//  locations = ["Braamfontein"];
+
+  Location.find({locationName: req.query.location}, function(err, doc){
+    var latitude = doc[0].latitude;
+    var longitude = doc[0].longitude;
+
+    res.render('activities', { currentLocation: req.query.location , Locations: locations, latitude: latitude, longitude: longitude });
+   
+  });
+  
+
+
+
 });
 
 // router.get('/incidents', function(req, res){
@@ -75,12 +94,12 @@ router.get('/api', function(req, res, next) {
 });
 
 
-// router.post('/incidents', function(req, res){
+router.post('/incidents', function(req, res){
 
-//   res.render('incidents', { currentLocation: req.query.location , Locations: locations});
+  res.render('incidents', { currentLocation: req.query.location , Locations: locations});
 
-//   console.log("got the post");
-// });
+  console.log("got the post");
+});
 
 
 module.exports = router;

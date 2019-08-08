@@ -21,11 +21,22 @@
     Analytics
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+     <h6 class="dropdown-header">Location</h6>
     {{#each Locations}}
   <a class="dropdown-item" href="#">{{this}}</a>
 {{/each}}  
   </div>
 </div></a>
+    <a class="nav-item nav-link" href="#"><div class="dropdown show">
+  <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Settings
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+<a class="dropdown-item" href="/locationsettings">Locations</a>
+<a class="dropdown-item" href="">Users</a>
+  </div>
+</div></a>
+
     </div>
   </div>
 </nav>

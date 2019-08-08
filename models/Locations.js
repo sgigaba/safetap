@@ -5,11 +5,14 @@ const LocationsSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    geoLocation : {
+    latitude : {
         type: Number,
         required: true
-
+    },
+    longitude : {
+        type: Number,
+        required: true
     }
 });
 
-const Locations = module.exports = mongoose.model('Locations', LocationsSchema);
+const Locations = module.exports = mongoose.model('locations', LocationsSchema);

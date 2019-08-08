@@ -8,14 +8,25 @@
    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/g75hrt7A-SyJyPRNh82p_mjEEkBqJw_Q4VZSLEiKmJG7n3YsEtTSCaY3HDluXCAV14Q" type="image/x-icon">
    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
+ <link rel= "stylesheet" href="../../public/stylesheets/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
   <script>
   $( function() {
     $( "#datepicker" ).datepicker();
   } );
 
   function clickyClick() {
+    
     url = '/incidents?location=' + document.getElementById("location").value+ "&date=" + document.getElementById("datepicker").value 
     window.open(url, '_blank');
 }
