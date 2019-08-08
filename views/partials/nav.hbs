@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <a class = "h3" href="/">TapSafe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#"><div class="dropdown show">
+  <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Activity
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <h6 class="dropdown-header">Location</h6>
+{{#each Locations}}
+  <a class="dropdown-item" href="activities?location={{this}}">{{this}}</a>
+{{/each}}  
+  </div>
+</div></a>
+          <a class="nav-item nav-link" href="#"><div class="dropdown show">
+  <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Analytics
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    {{#each Locations}}
+  <a class="dropdown-item" href="#">{{this}}</a>
+{{/each}}  
+  </div>
+</div></a>
+    </div>
+  </div>
+</nav>

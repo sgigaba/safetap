@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+  <!-- If IE use the latest rendering engine -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Set the page to the width of the device and set the zoom level -->
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <link rel="shortcut icon" href="https://lh3.googleusercontent.com/g75hrt7A-SyJyPRNh82p_mjEEkBqJw_Q4VZSLEiKmJG7n3YsEtTSCaY3HDluXCAV14Q" type="image/x-icon">
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+  function clickyClick() {
+    url = '/incidents?location=' + document.getElementById("location").value+ "&date=" + document.getElementById("datepicker").value 
+    window.open(url, '_blank');
+}
+  </script>

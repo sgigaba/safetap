@@ -1,0 +1,55 @@
+<div class="jumbotron">
+    <div class = "row justify-content-center">
+  <h2>{{currentLocation}} Incidents</h2>
+    </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+
+     <div class = "row justify-content-center">
+  <h2>Incidents</h2>
+    </div>
+    <form role = "form" id="incidents-form" method="post" action="/incidents" style = "display:inline">
+        <p>Date <input type="text" name = "date" id="datepicker"> </p> 
+        <button type="submit" class="btn btn-danger btn-lg btn-block">Display Incidents</button>
+    </form>
+
+
+         {{!-- <input type="hidden" id="location" name="location" value="{{currentLocation}}">
+        <p>Date <input type="text" name = "date" id="datepicker"> </p> 
+        <button onclick="clickyClick()" class="btn btn-danger btn-lg btn-block">Display Incidents</button> --}}
+</div>
+<div class = "jumbotron jumbotron-fluid"> 
+
+{{!-- {{#each incident}}
+<h6> {{this}} </h6>
+{{/each}} --}}
+</div>
+
+
+{{!-- <script>
+$(document).ready(()=>{
+  $("#incidents-form").on("submit", (e)=>{
+    e.preventDefault();
+    $.post()
+    console.log("---->");
+  })
+})
+
+</script> --}}
+
+{{!-- <div class="dropdown">
+  <a class="btn btn-secondary btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Students</a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    {{#each Locations}}
+  <a class="dropdown-item" href="#">{{this}}</a>
+{{/each}}  
+  </div>
+</div>
+
+
+
+<p>Guard on Duty <input type="text">  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  </button>
+  <div class="dropdown-menu">
+  </div></p> --}}
